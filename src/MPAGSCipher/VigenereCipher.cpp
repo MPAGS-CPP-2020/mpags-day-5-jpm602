@@ -71,5 +71,5 @@ std::string VigenereCipher::applyCipher( const std::string& inputText, const Cip
         const std::string character {inputText[i]};
         outputText += cipher.applyCipher(character, cipherMode);
     }   
-    return inputText;
+    return outputText;
 }
