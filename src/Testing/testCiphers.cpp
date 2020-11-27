@@ -29,6 +29,6 @@ TEST_CASE("Playfair Cipher encryption", "[playfair]") {
 }
 
 TEST_CASE("Vigenere Cipher encryption", "[vigenere]"){
-    VigenereCipher vc{"EXAMPLE"};
-    REQUIRE ( testCipher(vc, CipherMode::Encrypt, "HELLOWORLD", "HDJIKTIOIU") == true );
+    VigenereCipher vc{"VIGENEREEXAMPLE"};
+    REQUIRE ( testCipher(vc, CipherMode::Encrypt, "HELLOWORLD", "HFNOSZUUOM") == true );
 }
