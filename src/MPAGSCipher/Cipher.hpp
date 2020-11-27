@@ -18,11 +18,17 @@
 class Cipher
 {
     public:
+        /// Default constructor
         Cipher() = default;
+        /// Default copy constructor
         Cipher(const Cipher& rhs) = default;
+        /// Default move constructor
         Cipher(Cipher&& rhs) = default;
+        /// Default copy assignment constructor
         Cipher& operator=(const Cipher& rhs) = default;
+        /// Default move assignment constructor
         Cipher& operator=(Cipher&& rhs) = default;
+        /// Virtual default destructor
         virtual ~Cipher() = default;
 
         /**
