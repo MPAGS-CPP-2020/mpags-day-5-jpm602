@@ -4,9 +4,11 @@
 // Standard library includes
 #include <string>
 #include <vector>
+#include <map>
 
 // Our project headers
 #include "CipherMode.hpp"
+#include "CaesarCipher.hpp"
 
 /**
  * \file VigenereCipher.hpp
@@ -40,11 +42,14 @@ class VigenereCipher {
      * \param cipherMode whether to encrypt or decrypt the input text
      * \return the result of applying the cipher to the input text
      */
-    std::string applyCipher( const std::string& inputText, const CipherMode /*cipherMode*/ ) const;
+    std::string applyCipher( const std::string& inputText, const CipherMode cipherMode ) const;
 
   private:
     /// The cipher key
     std::string key_ = "";
+
+    /// Lookup table
+    std::map<char, CaesarCipher> charLookup_;
 };
 
 #endif
